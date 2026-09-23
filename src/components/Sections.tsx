@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDownRight, ArrowRight, Camera } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { events } from '../data/events'
 import { members } from '../data/members'
 import { proofPlaceholders } from '../data/partners'
@@ -10,7 +11,7 @@ const reveal = { initial: { opacity: 0, y: 35 }, whileInView: { opacity: 1, y: 0
 export function Intro() { return <section id="what" className="intro section-pad">
   <motion.div {...reveal} className="section-index">01 / WHAT IS EL?</motion.div>
   <motion.div {...reveal} className="intro-statement"><p>English Lounge is not a classroom.</p><h2>PEOPLE.<br /><span>CULTURE.</span><br /><em>PERSPECTIVES.</em></h2></motion.div>
-  <motion.div {...reveal} className="intro-note"><span>易言 / YÌ YÁN</span><p>A cross-cultural community where people meet, talk, create, and see the world differently. English is the medium. People are the point.</p><a className="text-link" href="#about">READ OUR STORY <ArrowDownRight size={17} /></a></motion.div>
+  <motion.div {...reveal} className="intro-note"><span>易言 / YÌ YÁN</span><p>A cross-cultural community where people meet, talk, create, and see the world differently. English is the medium. People are the point.</p><Link className="text-link" to="/about">READ OUR STORY <ArrowDownRight size={17} /></Link></motion.div>
 </section> }
 
 export function People() { return <section id="people" className="people section-pad">

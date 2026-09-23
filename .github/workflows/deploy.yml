@@ -24,6 +24,8 @@ jobs:
         env:
           # Change to / for a custom domain, or /REPOSITORY-NAME/ for a project site.
           VITE_BASE_PATH: /english-lounge/
+      - name: Add SPA fallback for direct page links
+        run: cp dist/index.html dist/404.html
       - uses: actions/configure-pages@v5
         with:
           enablement: true
