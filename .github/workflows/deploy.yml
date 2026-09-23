@@ -23,7 +23,7 @@ jobs:
       - run: npm run build
         env:
           # Change to / for a custom domain, or /REPOSITORY-NAME/ for a project site.
-          VITE_BASE_PATH: /
+          VITE_BASE_PATH: /english-lounge/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
